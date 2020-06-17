@@ -8,11 +8,20 @@ function load_scripts(){
 }
 add_action('wp_enqueue_scripts', 'load_scripts');
 
-// Registrando nossos menus
 
-register_nav_menus(
-    array(
-        'my_main_menu' => 'Main Menu',
-        'footer_menu' => 'Menu Footer' 
-    )
-);
+// Função de Configuração do Tema
+function wpcurso_config(){
+    // Registrando nossos menus
+    register_nav_menus(
+        array(
+            'my_main_menu' => 'Main Menu',
+            'footer_menu' => 'Footer Menu' 
+        )
+    );
+    $args = array(
+        'height' => 225,
+        'width' => 1920
+    );
+    add_theme_support('custom-header', $args);
+}
+add_action('after_setup_theme', 'wpcurso_config', 0);
