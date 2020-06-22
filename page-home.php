@@ -53,7 +53,7 @@
 								<div class="row">
 									<?php 
 
-									$featured = new WP_Query( 'post_type=post&posts_per_page=1&cat=4,3' );
+									$featured = new WP_Query( 'post_type=post&posts_per_page=1&cat=3,6' );
 
 									if( $featured->have_posts() ):
 										while( $featured->have_posts() ): $featured->the_post();
