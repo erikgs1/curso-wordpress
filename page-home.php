@@ -2,9 +2,7 @@
 	<div class="content-area">
 		<main>
 			<section class="slide">
-				<div class="container">
-					<div class="row">Slide</div>
-				</div>
+				<?php echo do_shortcode('[recent_post_slider design="design-2" limit="5"]'); ?>
 			</section>
 			<section class="services">
 				<div class="container">
@@ -53,7 +51,7 @@
 								<div class="row">
 									<?php 
 
-									$featured = new WP_Query( 'post_type=post&posts_per_page=1&cat=3,6' );
+									$featured = new WP_Query( 'post_type=post&posts_per_page=1&cat=3,4' );
 
 									if( $featured->have_posts() ):
 										while( $featured->have_posts() ): $featured->the_post();
@@ -100,9 +98,12 @@
 				</div>				
 			</section>
 			<section class="map">
-				<div class="container">
-					<div class="row">Mapa</div>
-				</div>				
+			<iframe
+				  width="100%"
+				  height="350"
+				  frameborder="0" style="border:0"
+				  src="https://www.google.com/maps/embed/v1/place?key=null=Space+Needle,Seattle+WA&zoom=15" allowfullscreen>
+				</iframe>		
 			</section>
 		</main>
 	</div>
