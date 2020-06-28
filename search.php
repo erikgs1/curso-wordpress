@@ -3,7 +3,7 @@
 		<div id="main">
 			<div class="container">
 
-				<h2>Search results for: </h2><?php echo get_search_query(); ?>
+				<h2><?php _e( 'Search results for:', 'wpcurso' ); ?> <?php echo get_search_query(); ?></h2>
 
 				<?php 
 
@@ -21,8 +21,8 @@
 
 				the_posts_pagination(
 					array(
-						'prev_text' => 'Previous',
-						'next_text' => 'Next'
+						'prev_text' => __( 'Previous', 'wpcurso' ),
+						'next_text' => __( 'Next', 'wpcurso')
 					)
 				);
 
